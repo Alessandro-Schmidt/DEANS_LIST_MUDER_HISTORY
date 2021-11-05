@@ -1,7 +1,7 @@
 import pyfiglet
 #from threading import Thread
 from tabulate import tabulate
-#import time
+import time
 
 """
 História: 
@@ -38,8 +38,8 @@ print(sub_title)
 #print('RELATÓRIO DA INVESTIGAÇÃO\nData do crime: 20/10/1962\nVítima: Andreia Malucelli, decâna da Escola Politécnica.\nLocal: Sigiloso.\nArma: Sigiloso.\nAutor do crime: em investigação.')
 #print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
 #print('\n\n-- HIPÓTESES --\n\n')
-#print('LOCAL -- \n\na) O assassinato foi feito ao ar livre.\n\nb) Foram encontrados documentos queimados da dec''na no lixo antes da saída da PUCPR.\n\nc) Ela foi vista correndo em diração à Escola Politécnica, com uma bolsa preta...\n\nd) Uma bolsa de cor desbotada foi achada nas margens do rio que passa pela PUCPR.\n\n')
-#print('ARMA --\n\na) Uma fita cassete pequena foi encontrada junto aos documentos no lixo. Nesta fita, havia o hino da Alemanha Oriental.\n\nb) O General da CIA dentro da PUCPR possui uma arma no seu escritório\n\nc) Espiões da KGB usam armas pouco convencionais para evitar suspeitas.\n\nd) Um compasso sujo foi encontrado junto com a identidade de um duplo espião.\n\ne) Um notebook completamente formatado foi derrubado próximo a cena do crime.\n\n')
+#print('LOCAL -- \n\na) O assassinato foi feito ao ar livre.\n\nb) Foram encontrados documentos queimados da decana no lixo antes da saída da PUCPR.\n\nc) Ela foi vista correndo em diração à Escola Politécnica, com uma bolsa preta...\n\nd) Uma bolsa de cor desbotada foi achada nas margens do rio que passa pela PUCPR.\n\n')
+#print('ARMA --\n\na) Uma fita cassete pequena foi encontrada junto aos documentos no lixo. Nesta fita, haviam instruções de como fugir do país.\n\nb) O General da CIA dentro da PUCPR possui uma arma no seu escritório\n\nc) Espiões da KGB usam armas pouco convencionais para evitar suspeitas.\n\nd) Um compasso sujo foi encontrado junto com a identidade de um duplo espião.\n\ne) Um notebook completamente formatado foi derrubado próximo a cena do crime.\n\n')
 #print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB na Universidade.\n\nb) Não era do interesse americano, a morte da decana.\n\nc) O assassino não era neutro.\n\nd) É conhecido o envolvimento de pelo menos um dos monitores com a KGB.\n\ne) Existem no mínimo, dois espiões duplos na Universidade.\n\nf) Se sabe que Alessandro já estava desconfiado de algo...')
 #print('\n\nFATOS IMPORTANTES\n\nf) Um dos agentes duplos não tem relação alguma com BES.\n\ng) Você investigar alguém pode causar a sua morte. \n\n')
 lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '?', ''], ['Marco Paludo', 'General da CIA dentro da PUC', ''], ['Professora Kelly', 'Espiã da CIA', ''], ['Daniel Nowak', '?', ''], ['André Delphino', 'Espião da KGB', ''], ['Giulia Carvalho', '?', ''], ['Sheila Reinehr', 'Espiã da CIA', '']]
@@ -48,14 +48,18 @@ while True:
   while True: 
     nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Kelly'],['5', 'Daniel Nowak', '6', 'André Delphino'], ['7','Giulia Carvalho', '8', 'Sheila Reinehr']]
     armas = [['Código', 'Arma'], ['1', 'Fita Cassete'], ['2', 'Arma do General'], ['3','Curto circuíto\nguiado\n(computador)'], ['4','Compasso'], ['5', 'Machado']]
-    locais = [['Código','Locais suspeitos'], ['1','Sala dos monitores'], ['2', 'Sala do General'], ['3', ''], ['4', 'Ponte Escola\nPolitécnica']]
+    locais = [['Código','Locais suspeitos'], ['1','Sala dos monitores'], ['2', 'Sala do General'], ['3', 'Sala secreta da CIA'], ['4', 'Ponte Escola\nPolitécnica']]
     escolhas_possiveis = [['Número da ação','Ação'], ['1','Investigar'], ['2', 'Acusar'], ['3', 'Consultar possibilidades']]
     print(tabulate(escolhas_possiveis, headers='firstrow', tablefmt='grid'))
     option = str(input('Digite sua escolha: ')).upper()
     if option =='3' or option in 'CONSULTAR':
+      print('+'+'-'*90+'+')
+      print('+--SUSPEITOS--+')
       print(tabulate(nomes,headers='firstrow', tablefmt='grid'))
       print(tabulate(armas,headers='firstrow', tablefmt='grid'))
       print(tabulate(locais,headers='firstrow', tablefmt='grid'))
+      print('+'+'-'*90+'+')
+      break
     elif option == '1' or option == 'INVESTIGAR':
       print('-'*len('INVESTIGAÇÃO')+'\nINVESTIGAÇÃO\n'+'-'*len('INVESTIGAÇÃO'))
       print(tabulate(nomes, headers='firstrow', tablefmt='grid'))
@@ -123,14 +127,56 @@ while True:
       break
 
     elif option == '2' or option == 'INVESTIGAR':
-      result_set = [False, False, False]
+      result_set = [False,False, False]
+      #while ()
       print(tabulate(nomes, headers='firstrow', tablefmt='grid'))
       opt_1 = str(input('\nDigite o código ou o nome de quem deseja acusar: ')).upper()
-      if opt_1 == '7' or opt in 'GIULIA CARVALHO':
-        result_set[0] = True
-      
-
-      
+      if opt_1 == '7' or opt_1 in 'GIULIA CARVALHO':
+        result_set[0] =True
+      else: 
+          result_set[0] = False
+    print(tabulate(armas,headers='firstrow', tablefmt='grid'))
+    opt_2 = str(input('\nDigite o código ou o nome da arma que cometeu o crime: ')).upper()
+    if opt_2 == '4' or opt_2 in 'COMPASSO':
+        result_set[1] = True
+    else: 
+          result_set[1] = False
+    print(tabulate(locais,headers='firstrow', tablefmt='grid'))
+    opt_3 = str(input('Digite o local onde acha que ocorreu o assassinato: ')).upper()
+    if opt_3 == '4' or opt_3 in 'PONTE':
+        result_set[2]=True
+    else: 
+          result_set[2] = False
+    while True:
+        print('Analisando suas escolhas...')
+        if  (result_set[0] and result_set[1] and result_set[2]) == True:
+            print('Você conseguiu!\nAo desobrir que a decâna sabia do seu envolvimento tanto com a CIA como a KGB, Giulia Carvalho, agente dupla foi ao seu encontro na ponte que dá acesso à Escola Politécnica da PUCPR\n')
+            time.sleep(10)
+            print('DECÂNA: Eu não posso deixar você fazer isso. Você corre perigo!')
+            time.sleep(5)
+            print('GIULIA: Não posso deixar a bomba de hidrogênio cair nas mãos dos Soviéticos, e para isso, ninguém pode saber do meu involvimento com a KGB.')
+            time.sleep(5)
+            print('DECÂNA: O projeto da bomba de hidrogênio previa a construção de usinas mais sustentáveis, nunca de armas mais letais. Eu queimei o projeto e joguei ele em uma lixeira. Embarco hoje de madrugada para a Suíça, lá, poderei me esconder dos dois lados')
+            time.sleep(10)
+            print('GIULIA: COMO')
+            time.sleep(3)
+            print('GIULIA: ASSIM?')
+            time.sleep(3)
+            print('DECÂNA: Corra Giulia, eu já consigo ver o André. \nCorra antes que seja tarde. Nessa bolsa tem tudo o que você precisa para fugir do país!')
+            time.sleep(10)
+            print('GIULIA: Você não me deu outra escolha... Eu não posso ser descoberta!')
+            time.sleep(5)
+            print('DECÂNA: Você não precisa fazer isso... Eles ainda vão descobrir sua identidade!')
+            time.sleep(10)
+            print('Giulia acerta a jugular da decâna com um compasso que guardava no bolso e a empurra da ponte.\nAndré, ainda confuso, foge e não ajuda Giulia a limpar os rastros')
+            break
+        else:
+            print(f'\nSua investigação é falha. Corra antes que o tempo acabe.\nVocê sabe {result_set.count(True)}/3 informações corretas.')
+            break
+        
+        
+    
+    
 
 def tempo():
   import time
