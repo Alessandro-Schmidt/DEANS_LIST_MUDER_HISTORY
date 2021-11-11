@@ -129,11 +129,14 @@ while True:
               print('Uma foto da Decâna na sala secreta da CIA é achada.')
               lados[3][2] = 'O assassino trabalhava no governo americano' + '\nFoto da decâna na sala secreta da CIA'
               lados[5][1] = '(Espião da CIA) ^ (Espião da KGB)'
-              
+            elif opt ==2:
+              print('\n"Não posso falar sobre o assassinato da Decâna. Mas sei que o Vinícius o único que é neutro é o Vinícius...\nA professora Kelly sabe mais sobre o assassino, e ela pode lhe falar sobre o ocorrido."')
+              lados[1][1] = 'Neutro.'
+            
                     
                   
       
-      
+  
       #elif p =4:
       
       #elif p =5:
