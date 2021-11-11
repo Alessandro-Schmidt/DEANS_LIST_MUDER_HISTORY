@@ -27,21 +27,21 @@ Personagens:
 """
 
 
-titulo = pyfiglet.figlet_format('DEANS LIST', font='banner3-D')
-sub_title = pyfiglet.figlet_format('Um misterio de ASSASSINATO', font='standard')
-print(titulo)
-print(sub_title)
+#titulo = pyfiglet.figlet_format('DEANS LIST', font='banner3-D')
+#sub_title = pyfiglet.figlet_format('Um misterio de ASSASSINATO', font='standard')
+#print(titulo)
+#print(sub_title)
 
 # início da história
-print('--- Contexto ---\nNo auge da Guerra Fria, uma semana após a crise dos mísseis de Cuba e início do bloqueio continental, a América Latina vive um momento de tensão sem igual.\n\nNa PUCPR não é diferente.\n\nEspiões andam disfarçados entres os alunos, com o objetivo de roubar os postits dos requisitos do projeto da Bomba de Hidrogênio.\n\nO prédio da Escola Politécnica é o mais vigiado do Paraná. Não é permitida a entrada de pessoas não autorizadas nas aulas de BES.\n\nO assassinato da reitora veio como um choque para os estudantes, e está sendo abafado pela mídia e pela Universidade.\n\nVocê foi designado pelo Governo Federal para solucionar o mistério. A justiça está nas suas mãos. Descubra o autor do crime, o local do crime e a arma do crime. SEJA RÁPIDO! O responsável pode estar fugindo.\n\nVocê tem 15 minutos para descobrir o criminoso ou então conviver pelo resto da vida com o peso de ter o deixado escapar pelos portões da PUCPR.')
-print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
-print('RELATÓRIO DA INVESTIGAÇÃO\nData do crime: 20/10/1962\nVítima: Andreia Malucelli, decâna da Escola Politécnica.\nLocal: Sigiloso.\nArma: Sigiloso.\nAutor do crime: em investigação.')
-print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
-print('\n\n-- HIPÓTESES --\n\n')
-print('LOCAL -- \n\na) O assassinato foi feito ao ar livre.\n\nb) Foram encontrados documentos queimados da decana no lixo antes da saída da PUCPR.\n\nc) Ela foi vista correndo em diração à Escola Politécnica, com uma bolsa preta...\n\nd) Uma bolsa de cor desbotada foi achada nas margens do rio que passa pela PUCPR.\n\n')
-print('ARMA --\n\na) Uma fita cassete pequena foi encontrada junto aos documentos no lixo. Nesta fita, haviam instruções de como fugir do país.\n\nb) O General da CIA dentro da PUCPR possui uma arma no seu escritório\n\nc) Espiões da KGB usam armas pouco convencionais para evitar suspeitas.\n\nd) Um compasso sujo foi encontrado junto com a identidade de um duplo espião.\n\ne) Um notebook completamente formatado foi derrubado próximo a cena do crime.\n\n')
-print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB na Universidade.\n\nb) Não era do interesse americano, a morte da decana.\n\nc) O assassino não era neutro.\n\nd) É conhecido o envolvimento de pelo menos um dos monitores com a KGB.\n\ne) Existem no mínimo, dois espiões duplos na Universidade.\n\nf) Se sabe que Alessandro já estava desconfiado de algo...')
-print('\n\nFATOS IMPORTANTES\n\nf) Um dos agentes duplos não tem relação alguma com BES.\n\ng) Você investigar alguém pode causar a sua morte. \n\n')
+#print('--- Contexto ---\nNo auge da Guerra Fria, uma semana após a crise dos mísseis de Cuba e início do bloqueio continental, a América Latina vive um momento de tensão sem igual.\n\nNa PUCPR não é diferente.\n\nEspiões andam disfarçados entres os alunos, com o objetivo de roubar os postits dos requisitos do projeto da Bomba de Hidrogênio.\n\nO prédio da Escola Politécnica é o mais vigiado do Paraná. Não é permitida a entrada de pessoas não autorizadas nas aulas de BES.\n\nO assassinato da reitora veio como um choque para os estudantes, e está sendo abafado pela mídia e pela Universidade.\n\nVocê foi designado pelo Governo Federal para solucionar o mistério. A justiça está nas suas mãos. Descubra o autor do crime, o local do crime e a arma do crime. SEJA RÁPIDO! O responsável pode estar fugindo.\n\nVocê tem 15 minutos para descobrir o criminoso ou então conviver pelo resto da vida com o peso de ter o deixado escapar pelos portões da PUCPR.')
+#print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
+#print('RELATÓRIO DA INVESTIGAÇÃO\nData do crime: 20/10/1962\nVítima: Andreia Malucelli, decâna da Escola Politécnica.\nLocal: Sigiloso.\nArma: Sigiloso.\nAutor do crime: em investigação.')
+#print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
+#print('\n\n-- HIPÓTESES --\n\n')
+#print('LOCAL -- \n\na) O assassinato foi feito ao ar livre.\n\nb) Foram encontrados documentos queimados da decana no lixo antes da saída da PUCPR.\n\nc) Ela foi vista correndo em diração à Escola Politécnica, com uma bolsa preta...\n\nd) Uma bolsa de cor desbotada foi achada nas margens do rio que passa pela PUCPR.\n\n')
+#print('ARMA --\n\na) Uma fita cassete pequena foi encontrada junto aos documentos no lixo. Nesta fita, haviam instruções de como fugir do país.\n\nb) O General da CIA dentro da PUCPR possui uma arma no seu escritório\n\nc) Espiões da KGB usam armas pouco convencionais para evitar suspeitas.\n\nd) Um compasso sujo foi encontrado junto com a identidade de um duplo espião.\n\ne) Um notebook completamente formatado foi derrubado próximo a cena do crime.\n\n')
+#print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB na Universidade.\n\nb) Não era do interesse americano, a morte da decana.\n\nc) O assassino não era neutro.\n\nd) É conhecido o envolvimento de pelo menos um dos monitores com a KGB.\n\ne) Existem no mínimo, dois espiões duplos na Universidade.\n\nf) Se sabe que Alessandro já estava desconfiado de algo...')
+#print('\n\nFATOS IMPORTANTES\n\nf) Um dos agentes duplos não tem relação alguma com BES.\n\ng) Você investigar alguém pode causar a sua morte. \n\n')
 lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '?', ''], ['Marco Paludo', 'General da CIA dentro da PUC', ''], ['Professora Kelly', 'Espiã da CIA', ''], ['Daniel Nowak', '?', ''], ['André Delphino', 'Espião da KGB', ''], ['Giulia Carvalho', '?', ''], ['Sheila Reinehr', 'Espiã da CIA', '']]
 while True: 
   print(tabulate(lados,headers='firstrow', tablefmt='grid'))
@@ -76,19 +76,19 @@ while True:
         print('\n\nVocê chega para investigar Vinícius...\n\n')
         #time.sleep(0.9)
         print('Vinícius é encontrado morto na sala de monitores. Alguém o atingiu com um machado. Vinícius segurava uma foto do campûs com uma ponte circulada em vermelho.')
-        lados[1][1] = '--- MORTO DURANTE INVESTIGAÇÃO ---'
-        lados [1][2] = 'Mapa da PUCPR ponte marcada\nMorto com machado'
+        lados[1][0] += '\n--- MORTO DURANTE INVESTIGAÇÃO ---'
+        lados[1][2] = 'Mapa da PUCPR ponte marcada\nMorto com machado'
       elif p == 2:
         while True:
           try: 
-            print('Alessadro:\n')
-            opt = int(input('[1] - Investigar\n[2] - Interrogar\nSua escolha: ')) 
+            print('\nAlessadro:')
+            opt = int(input('[1] - Seguir\n[2] - Interrogar\nSua escolha: '))    
             if opt not in range(1,3):
-              print('\033[31m\nDigite apenas opções válidas\n\033[m')
+                print('\033[31m\nDigite apenas opções válidas\n\033[m')
             else: 
               break
           except:
-            print('\033[31m\nDigite apenas opções válidas\n\033[m')
+              print('\033[31m\nDigite apenas opções válidas\n\033[m')
         if opt == 1:
           print('Você segue Alessandro e vê ele chegando próximo da Daniel Nowak, estudante de BCC.\n\nEles começam a conversar em alemão.')
           #time.sleep(1.5)
@@ -109,10 +109,29 @@ while True:
               print('\033[31m\nDigite apenas opções válidas\n\033[m')
         elif opt ==2: 
           print('Ele é difícil de desembuchar, provavelmente recebeu treinamento para isso\n\nA única coisa que diz: "Quem a matou tinha treinamento. Foi com uma arma de pequeníssimo porte, pois no corpo há apenas uma marca de perfuração. Provavelmente, coisa da KGB."')
-          lados[2][2]+='"Isso é coisa da KGB"\nEle é um provável espião.'
-        
-          
-      #elif p = 3:
+          lados[2][2]+='"Isso é coisa da KGB"\nAlessandro é um provável espião.'    
+          lados[2][1] ="(Espião da CIA) v (Espião da KGB)"     
+      elif p == 3:
+            print('\nMarco paludo é conhecido como a Águia Careca nos corredores da PUCPR. Tem autorização especial para carregar armas no pátio.')
+            while True:
+                  try:
+                    opt = int(input('[1] - Seguir\n[2] - Pedir informações sobre o assassinato\nSua escolha: '))
+                    if opt not in range(1,3):
+                      print('\033[31m\nDigite apenas opções válidas\n\033[m')
+                    else: 
+                      break
+                  except:
+                    print('\033[31m\nDigite apenas opções válidas\n\033[m')
+            if opt==1: 
+              print('\nPaludo vai andando até o bloco amarelo. Bloco de humanas. Ele anda pelos corredores, uma névoa estranha preenche o ambiente, você escuta risos e vê pessoas fazendo poucas coisas e tocando violão.\nEle ingressa em uma sala. A névoa mais densa do que nunca, as risadas mais fortes.\nOlhando pela janela da sala, você vê ele mexendo no projetor de uma sala vazia.\nDe repente, de uma estante de livros, surge uma porta, uma sala secreta.')
+              print('Você espera até ele sair para entrar e investigar a sala.')
+              print('Ao entrar na sala. Você vê todos os tipos de armamento, inclusive um machado sujo de sangue.\nVocê encontra documentos sigilosos, um deles escrito: "Um agente duplo descoberto. Missão: Assassinar Daniel Nowak e queimar suas informações.\n\nRelatório do assassinato de Andreia Malucelli: O responsável trabalhava para o governo americano."\n\nO resto da mensagem havia sido censurado.\n\n')
+              print('Uma foto da Decâna na sala secreta da CIA é achada.')
+              lados[3][2] = 'O assassino trabalhava no governo americano' + '\nFoto da decâna na sala secreta da CIA'
+              lados[5][1] = '(Espião da CIA) ^ (Espião da KGB)'
+              
+                    
+                  
       
       
       #elif p =4:
@@ -178,8 +197,8 @@ while True:
     
     
 
-def tempo():
-  import time
-  time.sleep(750)
+#def tempo():
+#  import time
+#  time.sleep(750)
 t1 = Thread(target=tempo)
 #while t1.is_alive():
