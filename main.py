@@ -46,7 +46,7 @@ lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '
 while True: 
   print(tabulate(lados,headers='firstrow', tablefmt='grid'))
   while True: 
-    nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Kelly'],['5', 'Daniel Nowak', '6', 'André Delphino'], ['7','Giulia Carvalho', '8', 'Sheila Reinehr']]
+    nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Rafaela'],['5', 'Daniel Nowak', '6', 'André Delphino'], ['7','Giulia Carvalho', '8', 'Sheila Reinehr']]
     armas = [['Código', 'Arma'], ['1', 'Fita Cassete'], ['2', 'Arma do General'], ['3','Curto circuíto\nguiado\n(computador)'], ['4','Compasso'], ['5', 'Machado']]
     locais = [['Código','Locais suspeitos'], ['1','Sala dos monitores'], ['2', 'Sala do General'], ['3', 'Sala secreta da CIA'], ['4', 'Ponte Escola\nPolitécnica']]
     escolhas_possiveis = [['Número da ação','Ação'], ['1','Investigar'], ['2', 'Acusar'], ['3', 'Consultar possibilidades']]
@@ -119,24 +119,25 @@ while True:
                     if opt not in range(1,3):
                       print('\033[31m\nDigite apenas opções válidas\n\033[m')
                     else: 
+                      if opt==1: 
+                        print('\nPaludo vai andando até o bloco amarelo. Bloco de humanas. Ele anda pelos corredores, uma névoa estranha preenche o ambiente, você escuta risos e vê pessoas fazendo poucas coisas e tocando violão.\nEle ingressa em uma sala. A névoa mais densa do que nunca, as risadas mais fortes.\nOlhando pela janela da sala, você vê ele mexendo no projetor de uma sala vazia.\nDe repente, de uma estante de livros, surge uma porta, uma sala secreta.')
+                        print('Você espera até ele sair para entrar e investigar a sala.')
+                        print('Ao entrar na sala. Você vê todos os tipos de armamento, inclusive um machado sujo de sangue.\nVocê encontra documentos sigilosos, um deles escrito: "Um agente duplo descoberto. Missão: Assassinar Daniel Nowak e queimar suas informações.\n\nRelatório do assassinato de Andreia Malucelli: O responsável trabalhava para o governo americano."\n\nO resto da mensagem havia sido censurado.\n\n')
+                        print('Uma foto da Decâna na sala secreta da CIA é achada.')
+                        lados[3][2] = 'O assassino trabalhava no governo americano' + '\nFoto da decâna na sala secreta da CIA'
+                        lados[5][1] = '(Espião da CIA) ^ (Espião da KGB)'
+                      elif opt ==2:
+                          print('\n"Não posso falar sobre o assassinato da Decâna. Mas sei que o Vinícius o único que é neutro é o Vinícius...\nA professora Kelly Rafaela sabe mais sobre o assassino, e ela pode lhe falar sobre o ocorrido."')
+                          lados[1][1] = 'Neutro.'   
                       break
                   except:
                     print('\033[31m\nDigite apenas opções válidas\n\033[m')
-            if opt==1: 
-              print('\nPaludo vai andando até o bloco amarelo. Bloco de humanas. Ele anda pelos corredores, uma névoa estranha preenche o ambiente, você escuta risos e vê pessoas fazendo poucas coisas e tocando violão.\nEle ingressa em uma sala. A névoa mais densa do que nunca, as risadas mais fortes.\nOlhando pela janela da sala, você vê ele mexendo no projetor de uma sala vazia.\nDe repente, de uma estante de livros, surge uma porta, uma sala secreta.')
-              print('Você espera até ele sair para entrar e investigar a sala.')
-              print('Ao entrar na sala. Você vê todos os tipos de armamento, inclusive um machado sujo de sangue.\nVocê encontra documentos sigilosos, um deles escrito: "Um agente duplo descoberto. Missão: Assassinar Daniel Nowak e queimar suas informações.\n\nRelatório do assassinato de Andreia Malucelli: O responsável trabalhava para o governo americano."\n\nO resto da mensagem havia sido censurado.\n\n')
-              print('Uma foto da Decâna na sala secreta da CIA é achada.')
-              lados[3][2] = 'O assassino trabalhava no governo americano' + '\nFoto da decâna na sala secreta da CIA'
-              lados[5][1] = '(Espião da CIA) ^ (Espião da KGB)'
-            elif opt ==2:
-              print('\n"Não posso falar sobre o assassinato da Decâna. Mas sei que o Vinícius o único que é neutro é o Vinícius...\nA professora Kelly sabe mais sobre o assassino, e ela pode lhe falar sobre o ocorrido."')
-              lados[1][1] = 'Neutro.'
-            
-                    
-                  
-      
-  
+        elif p == 4:
+              print('Professora Rafaela.')
+              print('A única coisa que posso dizer, é que o assassino usou um objeto pontiagudo pequeno.')
+              print('O assassino é espião duplo.')
+              lados
+              
       #elif p =4:
       
       #elif p =5:
