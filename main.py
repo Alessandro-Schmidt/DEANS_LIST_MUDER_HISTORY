@@ -132,11 +132,11 @@ while True:
                       break
                   except:
                     print('\033[31m\nDigite apenas opções válidas\n\033[m')
-        elif p == 4:
-              print('Professora Rafaela.')
-              print('A única coisa que posso dizer, é que o assassino usou um objeto pontiagudo pequeno.')
-              print('O assassino é espião duplo.')
-              lados
+      elif p == 4:
+            print('Professora Rafaela.')
+            print('A única coisa que posso dizer, é que o assassino usou um objeto pontiagudo pequeno.')
+            print('O assassino é espião duplo.')
+            lados[4][2]= 'Objeto pequeno / Assassino é espião duplo'
               
       #elif p =4:
       
