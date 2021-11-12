@@ -2,7 +2,6 @@ import pyfiglet
 #from threading import Thread
 from tabulate import tabulate
 import time
-
 """
 História: 
 Ocorreu o assassinato da decâna Andreia Maluceli, dentro do campûs da PUCPR. 
@@ -25,13 +24,10 @@ Personagens:
 - Giulia Carvalho - Desconhecida (dupla espiã); 
 - Sheila Reinehr (Espiã da CIA) 
 """
-
-
 #titulo = pyfiglet.figlet_format('DEANS LIST', font='banner3-D')
 #sub_title = pyfiglet.figlet_format('Um misterio de ASSASSINATO', font='standard')
 #print(titulo)
 #print(sub_title)
-
 # início da história
 #print('--- Contexto ---\nNo auge da Guerra Fria, uma semana após a crise dos mísseis de Cuba e início do bloqueio continental, a América Latina vive um momento de tensão sem igual.\n\nNa PUCPR não é diferente.\n\nEspiões andam disfarçados entres os alunos, com o objetivo de roubar os postits dos requisitos do projeto da Bomba de Hidrogênio.\n\nO prédio da Escola Politécnica é o mais vigiado do Paraná. Não é permitida a entrada de pessoas não autorizadas nas aulas de BES.\n\nO assassinato da reitora veio como um choque para os estudantes, e está sendo abafado pela mídia e pela Universidade.\n\nVocê foi designado pelo Governo Federal para solucionar o mistério. A justiça está nas suas mãos. Descubra o autor do crime, o local do crime e a arma do crime. SEJA RÁPIDO! O responsável pode estar fugindo.\n\nVocê tem 15 minutos para descobrir o criminoso ou então conviver pelo resto da vida com o peso de ter o deixado escapar pelos portões da PUCPR.')
 #print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
@@ -199,11 +195,6 @@ while True:
         else:
             print(f'\nSua investigação é falha. Corra antes que o tempo acabe.\nVocê sabe {result_set.count(True)}/3 informações corretas.')
             break
-        
-        
-    
-    
-
 #def tempo():
 #  import time
 #  time.sleep(750)
