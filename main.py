@@ -137,13 +137,16 @@ while True:
             print('A única coisa que posso dizer, é que o assassino usou um objeto pontiagudo pequeno.')
             print('O assassino é espião duplo.')
             lados[4][2]= 'Objeto pequeno / Assassino é espião duplo'
-              
-      #elif p =4:
-      
-      #elif p =5:
-      
-      #elif p = 6:
-      
+      elif p ==5:
+        print('Daniel Nowak... O estudante com passado obscuro.\n')
+        print('Você segue Daniel, e vê ele roubando documentos da sala secreta da CIA, e indo até a sala dos monitores.')
+        print('Lá, ele e André Delphino entram na sala. Você observa por cima da janela. Consegue escutar André dizendo "Não acredito que vou ter que matar a Giulia. Como ela poderia trabalhar para os EUA!"')
+        print('DANIEL: "Cuidado, ela anda sempre armada com uma arma de pequeno porte para não chamar a atenção."')
+        lados[7][1] = 'Espiã da CIA'
+        lados[5][2] = 'André vai tentar matar a Giulia.' + 'Giulia possui sempre uma arma pequena'
+        
+      elif p == 6:
+            print('André Delphino, o Carniceiro de Moscou.\nEle não colaboraria normalmente. Por isso você precisa sequestrar ele.')
       #elif p = 7:
       
       #elif p=8: 
