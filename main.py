@@ -1,3 +1,5 @@
+# Neste código existem bibliotecas que precisam ser instaladas no python. São elas a pyfiglet e a tabulate. Sugerimos baixar na máquina com os comandos pip ou rodar este código no Replit. 
+
 import pyfiglet
 from tabulate import tabulate
 import time
