@@ -6,10 +6,11 @@ import time
 titulo = pyfiglet.figlet_format('DEANS LIST', font='banner3-D')
 sub_title = pyfiglet.figlet_format('Um misterio de ASSASSINATO', font='standard')
 print(titulo)
+
 print(sub_title)
-time.sleep(5)
+
 # início da história
-print('--- Contexto ---\nNo auge da Guerra Fria, uma semana após a crise dos mísseis de Cuba e início do bloqueio continental, a América Latina vive um momento de tensão sem igual.\n\nNa PUCPR não é diferente.\n\nEspiões andam disfarçados entres os alunos, com o objetivo de roubar os postits dos requisitos do projeto da Bomba de Hidrogênio.\n\nO prédio da Escola Politécnica é o mais vigiado do Paraná. Não é permitida a entrada de pessoas não autorizadas nas aulas de BES.\n\nO assassinato da reitora veio como um choque para os estudantes, e está sendo abafado pela mídia e pela Universidade.\n\nVocê foi designado pelo Governo Federal para solucionar o mistério. A justiça está nas suas mãos. Descubra o autor do crime, o local do crime e a arma do crime. SEJA RÁPIDO! O responsável pode estar fugindo.\n\nVocê tem 15 minutos para descobrir o criminoso ou então conviver pelo resto da vida com o peso de ter o deixado escapar pelos portões da PUCPR.')
+print('--- Contexto ---\nNo auge da Guerra Fria, uma semana após a crise dos mísseis de Cuba e início do bloqueio continental, a América Latina vive um momento de tensão sem igual.\n\nNa PUCPR não é diferente.\n\nEspiões andam disfarçados entres os alunos, com o objetivo de roubar os postits dos requisitos do projeto da Bomba de Hidrogênio.\n\nO prédio da Escola Politécnica é o mais vigiado do Paraná. Não é permitida a entrada de pessoas não autorizadas nas aulas de BES.\n\nO assassinato da reitora veio como um choque para os estudantes, e está sendo abafado pela mídia e pela Universidade.\n\nVocê foi designado pelo Governo Federal para solucionar o mistério. A justiça está nas suas mãos. Descubra o autor do crime, o local do crime e a arma do crime. SEJA RÁPIDO! O responsável pode estar fugindo.\n\n')
 print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
 print('RELATÓRIO DA INVESTIGAÇÃO\nData do crime: 20/10/1962\nVítima: Andreia Malucelli, decâna da Escola Politécnica.\nLocal: Sigiloso.\nArma: Sigiloso.\nAutor do crime: em investigação.')
 print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
@@ -20,13 +21,13 @@ print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB 
 print('\n\nFATOS IMPORTANTES\n\nf) Um dos agentes duplos não tem relação alguma com BES.\n\ng) Você investigar alguém pode causar a sua morte.\n\nh) Cuidado com pistas falsas...\n\n')
 lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '?', ''], ['Marco Paludo', 'General da CIA dentro da PUC', ''], ['Professora Rafaela', 'Espiã da CIA', ''], ['Daniel Nowak', '?', ''], ['André Delphino', 'Espião da KGB', ''], ['Giulia Carvalho', '?', ''], ['Sheila Reinehr', 'Espiã da CIA', '']]
 
-time.sleep(60)
+
 
 while True: 
   print(tabulate(lados,headers='firstrow', tablefmt='grid'))
   while True: 
     nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Rafaela'],['5', 'Daniel Nowak', '6', 'André Delphino'], ['7','Giulia Carvalho', '8', 'Sheila Reinehr']]
-    armas = [['Código', 'Arma'], ['1', 'Fita Cassete'], ['2', 'Canivete Suíço'], ['3','Curto circuíto\nguiado\n(computador)'], ['4','Compasso'], ['5', 'Machado']]
+    armas = [['Código', 'Arma'], ['1', 'Fita Cassete'], ['2', 'Canivete Suíço'], ['3','Agulha'], ['4','Compasso'], ['5', 'Machado']]
     locais = [['Código','Locais suspeitos'], ['1','Sala dos monitores'], ['2', 'Biblioteca'], ['3', 'Sala secreta da CIA'], ['4', 'Ponte Escola\nPolitécnica']]
     escolhas_possiveis = [['Número da ação','Ação'], ['1','Investigar'], ['2', 'Acusar'], ['3', 'Consultar possibilidades']]
     print(tabulate(escolhas_possiveis, headers='firstrow', tablefmt='grid'))
