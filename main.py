@@ -19,17 +19,16 @@ print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
 print('RELATÓRIO DA INVESTIGAÇÃO\nData do crime: 20/10/1962\nVítima: Andreia Malucelli, decâna da Escola Politécnica.\nLocal: Sigiloso.\nArma: Sigiloso.\nAutor do crime: em investigação.')
 print('-'*len('Vítima: Andreia Malucelli, decâna da Escola Politécnica'))
 print('\n\n-- HIPÓTESES --\n\n')
-print('LOCAL -- \n\na) O assassinato em uma sala fechada, pois não há testemunhas\n\nb) Foram encontrados documentos queimados da decana no lixo antes da saída da PUCPR.\n\nc) Ela fazia encontros semanais com a CIA e a KGB para acalmar os ânimos, sempre em lugares secretos\n\nd) A CIA fechou o campûs, em especial o bloco amarelo.\n\n')
+print('LOCAL -- \n\na) O assassinato em uma sala fechada, pois não há testemunhas\n\nb) Foram encontrados documentos queimados da Decâna no lixo antes da saída da PUCPR.\n\nc) Ela fazia encontros semanais com a CIA e a KGB para acalmar os ânimos, sempre em lugares secretos\n\nd) A CIA fechou o campûs, em especial o bloco amarelo.\n\n')
 print('ARMA --\n\na) Uma fita cassete pequena foi encontrada junto aos documentos no lixo. Nesta fita, haviam instruções de como fugir do país.\n\nb) O General da CIA dentro da PUCPR possui uma arma no seu escritório\n\nc) Espiões da KGB usam armas pouco convencionais para evitar suspeitas.\n\nd) Aquilo que constrói, também destrói.\n\ne) Todos os computadores da PUCPR foram desligados no momento do assassinato.\n\n')
-print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB na Universidade.\n\nb) Não era do interesse americano, a morte da decana.\n\nc) O assassino não era neutro.\n\nd) É conhecido o envolvimento de pelo menos um dos monitores com a KGB.\n\ne) Quem cometeu o crime, estava acompanhado de alguém do sexo oposto.\n\nf) Se sabe que Alessandro já estava desconfiado de algo...')
-print('\n\nFATOS IMPORTANTES\n\nf) Você investigar alguém pode causar a sua morte.\n\ng) Cuidado com pistas falsas...\n\n')
+print('SUSPEITO --\n\na) Se sabe da existência de no mínimo uma espiã da KGB na Universidade.\n\nb) Não era do interesse americano, a morte da Decâna.\n\nc) O assassino não era neutro.\n\nd) É conhecido o envolvimento de pelo menos um dos monitores com a KGB.\n\ne) Quem cometeu o crime, estava acompanhado de alguém do sexo oposto.')
+print('\n\nFATOS IMPORTANTES\n\nf) Você investigar alguém pode causar a sua morte.\n\ng) Cuidado com pistas falsas...\n\nh) A seguência com que investiga os personagens pode mudar as dicas que recebe!\n\ni) Você pode investigar alguns personagens novamente depois de outras revelação!\n\nBOA SORTE!')
 lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '?', ''], ['Marco Paludo', 'General da CIA dentro da PUC', ''], ['Professora Rafaela', 'Espiã da CIA', ''], ['Giulia Carvalho', '?', ''], ['Sheila Reinehr', 'Espiã da CIA', '']]
-
-
 
 while True: 
   print(tabulate(lados,headers='firstrow', tablefmt='grid'))
   while True: 
+    morte_em_acao = False
     tool = False
     nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Rafaela'],['5','Giulia Carvalho', '6', 'Sheila Reinehr']]
     armas = [['Código', 'Arma'], ['1', 'Estrangulamento'], ['2', 'Martelo'], ['3','Agulha'], ['4','Compasso'], ['5', 'Machado']]
@@ -62,7 +61,7 @@ while True:
         time.sleep(1.5)
         print('Ele olha para os dois lados, e quando descobre suas intenções, pede que aja naturalmente, enquanto põe uma arma na sua cintura.')
         time.sleep(2)
-        print("Ele manda você andar até a sala dos monitores. Chegando lá. Ele lhe entrega uma chave de ponta triangular. E diz para você não se desfazer dele")
+        print("Ele manda você andar até a sala dos monitores. Chegando lá. Ele lhe entrega uma chave de ponta triangular. E diz para você não se desfazer dela")
         time.sleep(2)
         print('VINÍCIUS: "Não confie em ninguém. É apenas isso que me permitiram dizer."')
         lados[1][2] = 'Chave de ponta triangular'
@@ -71,37 +70,71 @@ while True:
           print('\nAlessadro:')
           time.sleep(2) 
           print('Ele é difícil de desembuchar, provavelmente recebeu treinamento para isso\n\nA única coisa que diz: "Me proibiram de falar sobre esse tema... Se disser algo, corro sério risco de vida. O que posso dizer, o crime foi feito em duas pessoas, uma delas, não tinha nada haver com a PUCPR. A arma foi manual."')
-          lados[2][2]+='"Estavam em dois."\nArma manual (?)'    
+          lados[2][2] ='"Estavam em dois."\nArma manual (?)'    
           lados[2][1] ="(Espião da CIA) v (Espião da KGB)"
           time.sleep(10)  
       elif p == 3:
             if tool==True:
               print('PALUDO: Eu não auxiliaria você regularmente. Mas você contém a chave de formato triangular que nos faltava... Nesta caixa aqui, que foi roubada da KGB, há o que eles sabem do caso...')
-              print("PALUDO: Veja só o que encontramos!\nUm bilhete escrito: 'Tudo o que a Sheila lhe disse, é mentira.'\n ")
+              print("PALUDO: Veja só o que encontramos!\nUm bilhete escrito: 'Tudo o que a Sheila lhe disse, é mentira.'\nUm machado cheio de sangue...? Pra que será que foi usado?")
+              lados[3][2] = 'Tudo que a Sheila disser é mentira.\nMachado ensanguentado.'
+              lados[6][2] = '~'
               time.sleep(5)
             else: 
               print('Não consegue me ajudar. As informações do caso estão nesta caixa super protegida... Apenas uma chave com a ponta triangular é capaz de abrir a caixa. Investigue mais pessoas até achar a chave.')
               time.sleep(4)            
       elif p == 4:
             print('Professora Rafaela.')
-            print('A única coisa que posso dizer, é que o assassino usou um objeto pontiagudo pequeno... E... nem devia dizer isso! O espião é agente duplo.')
-            time.sleep(5)
-            lados[4][2]= 'Objeto pequeno / Assassino é espião duplo'
+            print('Com muita pressa, a professora olha nos seus olhos atordoada e diz: ')
+            time.sleep(2)           
+            print('RAFAELA: "Vou te dizer tudo que eu sei ok? Vinícius é um espião da CIA, ele e o Alessandro trabalham pra mim, infelizmente o Alessandro é Neutro. Mas vê se para de se preocupar com isso! Já aconteceu, não há mais o que eu possa fazer! Preciso ir!"')
+            time.sleep(9)
+            lados[4][2] = 'Dispersou o assunto,\nmuita pressa'
+            lados[1][1] = 'Espião da CIA'
+            lados[2][1] = 'Neutro'
       elif p ==5:
+        morte_em_acao = True
         print('Giulia Carvalho...')
-        print('Foi difícil encontrar Giulia, você a viu saindo do ateliê de Arquitetura, aparentemente ela estava escondida lá. Com movimentos rápidos e diretos ela se movimenta pelo campus. Em um determinado momento, ela se esconde, e sai com o que parece ser um disfarce e escutando uma fita cassete.')
-        print('Ela parece não querer contato com ninguém. Você é obrigado a tomar medidas drásticas.')
-        print('Você enconta uma arma na cintura dela, e aponta para uma das salas. O semblante de frustração é claro.')
-        print('GIULIA: "O André acha que eu fui responsável pelo assassinato da Decana. Por isso está vindo atrás de mim."')
-        print('INVESTIGADOR: "O que você está escutando nessa fita? "')
-        print('GIULIA: O hino da Alemanha Oriental. Preciso me preparar psicológicamente para um interrogatório seguido de tortura da KGB.')
-        print('GIULIA: Olha, eu realmente preciso ir... Mas posso te dizer que o responsável por isso é mais inocente do que você imagina.')
-        time.sleep(25)
-        lados[7][2] = '"O responsável é mais inocente que pensamos"\n/ Fita Alemanha oriental / Sala de Arquitetura'
+        print('GIULIA: Por que quer tanto investigar esse caso?')
+        time.sleep(2)
+        print('Tirando da bolsa um compasso e encostando em seu pescoço, ela revela sua identidade. Uma genuina espiã da KGB.\nEla lhe leva até a sala secreta, junto com outros espiões.')
+        time.sleep(5)
+        print('Chegando lá, você reconhece um rosto. Sheila Reinehr. Uma surpresa para todos.')
+        time.sleep(3)
+        print('GIULIA: Se eliminarmos você assim, vai ficar muito suspeito. Vamos ajudar na investigação, afinal, também queremos a cabeça de quem fez isso. Nós queríamos apenas sequestrar e torturar a decâna por informações sobre a bomba de Hidrogênio, nunca matar ela. Agora, a única que conhecia o projeto todo se foi.')
+        time.sleep(7)
+        print('A última vez que vimos a Decâna foi enquanto ela ia para a sala secreta da CIA. Achamos estranho ela ter reunião lá, todas as reuniões da Decâna com a CIA eram feitas em locais aleatórios. ')
+        time.sleep(7)
+        print('SHEILA: "Os maiores interessados na morte da Decâna eram aqueles que foram preteridos na mudança de gerência "')
+        print('')
+        lados[5][1] = 'Espiã da KGB'
+        lados[6][1] += '^ (Espiã KGB)'    
       elif p == 6:
-        print('Sheila Reinehr...')
-        lados[7][1] = '(Espiã da CIA) v (Espiã da KGB)'
-      break
+        if morte_em_acao == False: 
+          print('Sheila Reinehr...')
+          print('SHEILA: "O assassinato foi cometido por uma pessoa solteira."\nSHEILA: "Eu não sei muito sobre o caso, mas sei que foi cometido ao ar livre e em um local público!"')
+          lados[6][2] = '(Assassino solteiro)'
+        else: 
+          lados[6][1] = 'Morta durante a operação.'
+          print('Você chega para investigar Sheila Reinehr...')
+          time.sleep(2)
+          print('Ao chegar perto da sala secreta da CIA, você percebe um certo tumulto... Alguns gritos, e depois silêncio.')
+          time.sleep(2)
+          print('Você escuta Marco Paludo falando com alguém... Giulia Carvalho, espiã da KGB... QUE CONFUSÃO!\n')
+          time.sleep(3)
+          print('PALUDO: Você eu treinei pra ser dupla espiã. A Sheila não. Ninguém mente para a Águia Careca e fica impune!')
+          time.sleep(4)
+          print('GIULIA: Então quer que vá atrás da responsável do assassinato da Decânca?')
+          time.sleep(3)
+          print('PALUDO: Ela já está fugindo do país nessa altura do campeonato... ou se escondido em uma montanha! Sei lá!')
+          time.sleep(3)
+          print('Você não entende muita coisa, escutando através da janela da sala, você se levanta e tenta ver o que está acontecendo... A conversa entre Giulia e Paludo acontece sobre o corpo gelado de Sheila. O seu envolvimento não supervisionado com a KGB não foi perdoado...')
+          time.sleep(9)
+          print('A causa da morte? Cortaram a garganta dela com um Postit muito afiado! Que crueldade!')
+          time.sleep(2)
+          print('Você anota tudo, e sai de fininho para não ser pego.')
+          time.sleep(4)
+          lados[6][2] = 'Assassina nas montanhas...'
     elif option == '2' or option == 'ACUSAR':
       result_set = [False,False, False]
       print(tabulate(nomes, headers='firstrow', tablefmt='grid'))
@@ -125,7 +158,7 @@ while True:
       while True:   
           print('Analisando suas escolhas...')
           if  (result_set[0] and result_set[1] and result_set[2]) == True:
-              sub_ = pyfiglet.figlet_format('CONSEGUIU! VINGOU A MORTE DA DECANA!', font='standard')
+              sub_ = pyfiglet.figlet_format('CONSEGUIU! VINGOU A MORTE DA ÂNA!', font='standard')
               print(sub_)
               dialogos.dialogo_final()
               break
