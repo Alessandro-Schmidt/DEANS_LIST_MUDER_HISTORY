@@ -28,12 +28,11 @@ lados = [['Nome:', 'Lado:', 'Pistas:'], ['Vinícius', '?', ''], ['Alessandro', '
 while True: 
   print(tabulate(lados,headers='firstrow', tablefmt='grid'))
   while True: 
-    morte_em_acao = False
     tool = False
     nomes = [['Código', 'Nome', 'Código', 'Nome'],['1', 'Vinícius', '2', 'Alessandro'], ['3', 'Marco Paludo', '4', 'Professora Rafaela'],['5','Giulia Carvalho', '6', 'Sheila Reinehr']]
     armas = [['Código', 'Arma'], ['1', 'Estrangulamento'], ['2', 'Martelo'], ['3','Agulha'], ['4','Compasso'], ['5', 'Machado']]
     locais = [['Código','Locais suspeitos'], ['1','Sala dos monitores'], ['2', 'Biblioteca'], ['3', 'Sala secreta da CIA'], ['4', 'Ponte Escola\nPolitécnica']]
-    escolhas_possiveis = [['Número da ação','Ação'], ['1','Investigar'], ['2', 'Acusar'], ['3', 'Consultar possibilidades']]
+    escolhas_possiveis = [['Número da ação','Ação'], ['1','Investigar'], ['2', 'Acusar'], ['3', 'Consultar pistas']]
     print(tabulate(escolhas_possiveis, headers='firstrow', tablefmt='grid'))
     option = str(input('Digite sua escolha: ')).upper()
     if option =='3' or option in 'CONSULTAR':
