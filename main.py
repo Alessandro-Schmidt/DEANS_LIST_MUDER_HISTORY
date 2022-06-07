@@ -2,7 +2,6 @@
 Você pode fazer a inserção dessas bibliotecas no visual studio code como mostra nesse vídeo: 
 https://www.youtube.com/watch?v=-Wvt7lWxzf4
 trilha sonora recomendada: https://www.youtube.com/watch?v=ytw6ivAjkig&t=122s """
-
 import pyfiglet
 from tabulate import tabulate
 import time
